@@ -16,14 +16,14 @@ apply plugin: 'org.parchmentmc.librarian.forgegradle'
 apply plugin: 'maven-publish'
 apply plugin: 'org.spongepowered.mixin'
 
-version = '0.0.1'
+version = mod_version
 group = 'xyz.nucloid.fantasy'
 archivesBaseName = 'fantasy'
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(8)
 
 minecraft {
-    mappings channel: 'parchment', version: '2021.10.17-1.16.5'
+    mappings channel: 'parchment', version: parchment_version
     runs {
         client {
             workingDirectory project.file('run')
@@ -72,10 +72,10 @@ repositories {
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.16.5-36.2.39'
+    minecraft 'net.minecraftforge:forge:' + forge_version
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
     implementation 'org.jetbrains:annotations:24.0.1'
-    implementation 'com.github.PortingLab:ForgedAPI:v0.1.1-mc1.16.5'
+    implementation 'com.github.PortingLab:ForgedAPI:' + forged_api_tag
 }
 
 mixin {
