@@ -1,0 +1,17 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "xyz.nucleoid.fantasy.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "fantasy.refmap.json",
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "mixins": [
+    "api.IntegerValueImpl",
+    "MinecraftServerAccess",
+    "ServerChunkManagerMixin",
+    "ServerWorldMixin",
+    "registry.SimpleRegistryMixin"
+  ]
+}

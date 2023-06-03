@@ -1,0 +1,12 @@
+modLoader="javafml"
+loaderVersion="[36,)"
+license="GNU Lesser General Public License v3.0"
+
+[[mods]]
+modId="fantasy"
+version="${file.jarVersion}"
+displayName="Fantasy"
+authors="Team Potato"
+description='''
+
+'''
