@@ -11,7 +11,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import xyz.nucleoid.fantasy.FantasyWorldAccess;
 
 @Mixin(ServerChunkProvider.class)
-public class ServerChunkManagerMixin {
+public abstract class ServerChunkManagerMixin {
     @Shadow @Final public ServerWorld level;
     @Inject(method = "pollTask", at = @At("HEAD"), cancellable = true)
     private void onPollTask(CallbackInfoReturnable<Boolean> cir) {

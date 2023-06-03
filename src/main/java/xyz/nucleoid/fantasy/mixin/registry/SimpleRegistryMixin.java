@@ -15,7 +15,7 @@ import xyz.nucleoid.fantasy.RemoveFromRegistry;
 import java.util.Map;
 
 @Mixin(SimpleRegistry.class)
-public class SimpleRegistryMixin<T> implements RemoveFromRegistry<T> {
+public abstract class SimpleRegistryMixin<T> implements RemoveFromRegistry<T> {
     @Shadow @Final private Object2IntMap<T> toId;
     @Shadow @Final private BiMap<ResourceLocation, T> storage;
     @Shadow @Final private BiMap<RegistryKey<T>, T> keyStorage;
